@@ -1,0 +1,303 @@
+{
+  "tabPane": [
+    {
+      "title": "SmartDashboard",
+      "autoPopulate": true,
+      "autoPopulatePrefix": "SmartDashboard/",
+      "widgetPane": {
+        "gridSize": 128.0,
+        "showGrid": true,
+        "hgap": 16.0,
+        "vgap": 16.0,
+        "titleType": 0,
+        "tiles": {
+          "0,2": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Number Slider",
+              "_source0": "network_table:///SmartDashboard/X",
+              "_title": "X",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Slider Settings/Min": -0.1,
+              "Slider Settings/Max": 0.1,
+              "Slider Settings/Block increment": 0.0625,
+              "Visuals/Display value": true
+            }
+          },
+          "0,3": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Number Slider",
+              "_source0": "network_table:///SmartDashboard/Y",
+              "_title": "Y",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Slider Settings/Min": -0.1,
+              "Slider Settings/Max": 0.1,
+              "Slider Settings/Block increment": 0.0625,
+              "Visuals/Display value": true
+            }
+          },
+          "0,4": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Number Slider",
+              "_source0": "network_table:///SmartDashboard/Z",
+              "_title": "Z",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Slider Settings/Min": -0.1,
+              "Slider Settings/Max": 0.1,
+              "Slider Settings/Block increment": 0.0625,
+              "Visuals/Display value": true
+            }
+          },
+          "2,2": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Number Slider",
+              "_source0": "network_table:///SmartDashboard/Roll",
+              "_title": "Roll",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Slider Settings/Min": -180.0,
+              "Slider Settings/Max": 180.0,
+              "Slider Settings/Block increment": 0.0625,
+              "Visuals/Display value": true
+            }
+          },
+          "2,3": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Number Slider",
+              "_source0": "network_table:///SmartDashboard/Pitch",
+              "_title": "Pitch",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Slider Settings/Min": -90.0,
+              "Slider Settings/Max": 90.0,
+              "Slider Settings/Block increment": 0.0625,
+              "Visuals/Display value": true
+            }
+          },
+          "2,4": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Number Slider",
+              "_source0": "network_table:///SmartDashboard/Yaw",
+              "_title": "Yaw",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Slider Settings/Min": -180.0,
+              "Slider Settings/Max": 180.0,
+              "Slider Settings/Block increment": 0.0625,
+              "Visuals/Display value": true
+            }
+          },
+          "1,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Toggle Switch",
+              "_source0": "network_table:///SmartDashboard/Show Axes",
+              "_title": "Show Axes",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "3,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Toggle Switch",
+              "_source0": "network_table:///SmartDashboard/Show Text Axes",
+              "_title": "Show Text Axes",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "4,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Toggle Switch",
+              "_source0": "network_table:///SmartDashboard/Show Text",
+              "_title": "Show Text",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "5,0": {
+            "size": [
+              8,
+              6
+            ],
+            "content": {
+              "_type": "Camera Stream",
+              "_source0": "camera_server://Detected",
+              "_title": "Detected",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Crosshair/Show crosshair": true,
+              "Crosshair/Crosshair color": "#FFFFFFFF",
+              "Controls/Show controls": true,
+              "Controls/Rotation": "NONE",
+              "compression": -1.0,
+              "fps": -1,
+              "imageWidth": -1,
+              "imageHeight": -1
+            }
+          },
+          "0,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Tag X",
+              "_title": "Tag X",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "1,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Tag Y",
+              "_title": "Tag Y",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "2,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Tag Z",
+              "_title": "Tag Z",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "3,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Tag Roll",
+              "_title": "Tag Roll",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "4,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Tag Pitch",
+              "_title": "Tag Pitch",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "4,2": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///SmartDashboard/Tag Yaw",
+              "_title": "Tag Yaw",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "0,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Toggle Switch",
+              "_source0": "network_table:///SmartDashboard/Correct Cam Convention",
+              "_title": "Correct Cam Convention",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "2,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Toggle Switch",
+              "_source0": "network_table:///SmartDashboard/Rotate Tag",
+              "_title": "Rotate Tag",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "LiveWindow",
+      "autoPopulate": true,
+      "autoPopulatePrefix": "LiveWindow/",
+      "widgetPane": {
+        "gridSize": 128.0,
+        "showGrid": true,
+        "hgap": 16.0,
+        "vgap": 16.0,
+        "titleType": 0,
+        "tiles": {}
+      }
+    }
+  ],
+  "windowGeometry": {
+    "x": -8.0,
+    "y": -8.0,
+    "width": 1936.0,
+    "height": 1056.0
+  }
+}
