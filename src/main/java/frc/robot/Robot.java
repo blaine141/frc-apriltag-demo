@@ -45,10 +45,10 @@ public class Robot extends TimedRobot {
   private final double CAM_FY = 1600.42;
   private final double CAM_CX = 986.8;
   private final double CAM_CY = 744.1;
-
-  private final double TAG_SIZE = 0.1524;
   private final int IMG_WIDTH = 1920;
   private final int IMG_HEIGHT = 1080;
+
+  private final double TAG_SIZE = 0.1524;
 
   private final Scalar OUTLINE_COLOR = new Scalar(0, 255, 0);
   private final Scalar BACKGROUND_COLOR = new Scalar(0, 0, 0);
