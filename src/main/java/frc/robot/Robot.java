@@ -142,6 +142,7 @@ public class Robot extends TimedRobot {
     SmartDashboard.putBoolean("Rotate Tag", false);
     SmartDashboard.putBoolean("Show Text Axes", false);
     SmartDashboard.putBoolean("Show Text", false);
+    SmartDashboard.putBoolean("Animate Text", false);
 
 
 
@@ -218,6 +219,16 @@ public class Robot extends TimedRobot {
         Pose3d textCenterWRTCam = tagWRTCam.plus(tagToTextCenter);
         if (SmartDashboard.getBoolean("Show Text Axes", true))
           plotAxes(mat, textCenterWRTCam, 0.025, 0.002);
+
+
+        // Animate the text spinning
+        if (SmartDashboard.getBoolean("Animate Text", true))
+        {
+          double yaw = SmartDashboard.getNumber("Yaw", 0);
+          yaw += 3;
+          yaw = ((yaw + 180) % 360) - 180; // Wrap yaw to [-180, 180)
+          SmartDashboard.putNumber("Yaw", yaw);
+        }
 
   
         
