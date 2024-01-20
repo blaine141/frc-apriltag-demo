@@ -41,11 +41,14 @@ import org.opencv.imgproc.Imgproc;
  */
 public class Robot extends TimedRobot {
 
+  // Camera calibration parameters
+  // You will need to calibrate your camera to get these values
+  // If you do not update these values, the detection will be inaccurate
   private final double CAM_FX = 1603.71;
   private final double CAM_FY = 1600.42;
   private final double CAM_CX = 986.8;
   private final double CAM_CY = 744.1;
-  private final int IMG_WIDTH = 1920;
+  private final int IMG_WIDTH = 1920;  // If the IMG_WIDTH and IMG_HEIGHT do not match the camera's resolution, the camera may refuse to work
   private final int IMG_HEIGHT = 1080;
 
   private final double TAG_SIZE = 0.1524;
@@ -69,7 +72,7 @@ public class Robot extends TimedRobot {
     return project(pose.getTranslation());
   }
 
-  // Projects a 3d pose into a image coordinate. Pose must be in NED convention
+  // Projects a 3d position into an image coordinate. Pose must be in NED convention
   public Point project(Translation3d position) {
     position = position.div(position.getX());
     return new Point(-position.getY() * CAM_FX + CAM_CX, -position.getZ() * CAM_FY + CAM_CY);
@@ -101,7 +104,7 @@ public class Robot extends TimedRobot {
   void apriltagVisionThreadProc() {
     var detector = new AprilTagDetector();
 
-    // look for tag16h5, don't correct any error bits
+    // look for tag16h5, you can chance this if you want to use another family
     detector.addFamily("tag16h5", 0);
 
     // Enable multi-thread for faster detection
@@ -109,9 +112,7 @@ public class Robot extends TimedRobot {
     config.numThreads = 6;
     detector.setConfig(config);
 
-    // Set up Pose Estimator - parameters are for a Microsoft Lifecam HD-3000
-    // (https://www.chiefdelphi.com/t/wpilib-apriltagdetector-sample-code/421411/21)
-
+    // Set up Pose Estimator
     var poseEstConfig = new AprilTagPoseEstimator.Config(
         TAG_SIZE, CAM_FX, CAM_FY, CAM_CX, CAM_CY);
     var estimator = new AprilTagPoseEstimator(poseEstConfig);
