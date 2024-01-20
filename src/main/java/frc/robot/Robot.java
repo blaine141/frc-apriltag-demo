@@ -51,7 +51,9 @@ public class Robot extends TimedRobot {
   private final int IMG_WIDTH = 1920;  // If the IMG_WIDTH and IMG_HEIGHT do not match the camera's resolution, the camera may refuse to work
   private final int IMG_HEIGHT = 1080;
 
-  private final double TAG_SIZE = 0.1524;
+  // Update these values to match the tag you are using
+  private final double TAG_SIZE = 0.1524; // in meters
+  private final int TAG_ID = 0;
 
   private final Scalar OUTLINE_COLOR = new Scalar(0, 255, 0);
   private final Scalar BACKGROUND_COLOR = new Scalar(0, 0, 0);
@@ -167,7 +169,7 @@ public class Robot extends TimedRobot {
 
       // For each april tag
       for (AprilTagDetection detection : detections) {
-        if (detection.getId() != 0) {
+        if (detection.getId() != TAG_ID) {
           continue;
         }
 
